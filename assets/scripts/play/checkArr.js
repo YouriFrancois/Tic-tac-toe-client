@@ -17,12 +17,17 @@ else if ( (arr[2] === 'X'||arr[2] === 'O' )&& arr[2] === arr[5]  &&   arr[5] ===
 //  Oblick
 
 else if ( (arr[0] === 'X'||arr[0] === 'O' )&& arr[0] === arr[4]  &&   arr[4] === arr[8]  ) {console.log('this is 7 '); return true }
-else if ( (arr[2] === 'X'||arr[2] === 'O' )&& arr[2] === arr[4]  &&   arr[4] === arr[6]  ) {return console.log('this is 8 ');  true }
+else if ( (arr[2] === 'X'||arr[2] === 'O' )&& arr[2] === arr[4]  &&   arr[4] === arr[6]  ) {console.log('this is 8 '); return   true }
 
 return false
 
 }
 
+const draw= function(arr){
+  for (let i = 0; arr.length>i;i++){
+
+  }
+}
 const erase= function(arr){
   for (let i = 0; arr.length>i;i++){arr[i]=''}
 }

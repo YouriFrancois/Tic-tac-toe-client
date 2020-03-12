@@ -13,6 +13,12 @@ $(() => {
   $("#sign-up").on('submit',authEvents.onSignUp)
   $("#sign-in").on('submit',authEvents.onSignIn)
   $("#play-div").on('click',playEvents.clickOn)
-$("#new-game").on('click',playEvents.restart)
+  $("#new-game").on('click',playEvents.restart)
+  $("#change-password").on('submit',authEvents.onChangePassword)
+  $("#cancel-pwd").on('click',authEvents.onCancelPwd)
+  $("#change-pwd").on('click',authEvents.onchangePwd)
+$("#sign-out").on('click',authEvents.onSignOut)
+  $("#report").on('click',playEvents.report)
 
+  $("#back").on('click',authEvents.onCancelPwd)
 })

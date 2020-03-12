@@ -12,17 +12,14 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
 
-
-
     <body>
 
-        <div id='message'><h2>: </h2></div>
-
-      <!--           sign in  -->
-
-
+      <!--           sign in   -->
+<h1> Tic-tac-toe </h1>
+<div id='message'><h2></h2></div>
 <div id="first-page">
-    <h1>  welcome please sign up or sign in </h1>
+    <h2>  welcome please sign up or sign in </h2>
+
   <form id="sign-up" class="border">
 <fieldset>
 <legend> sign up </legend>
@@ -32,8 +29,7 @@
 <input type = "submit" value="sign up">
 </fieldset>
 </form>
-
-
+             <!--        sec form -->
 <form id="sign-in" class="border">
 <fieldset>
 <legend> sign in </legend>
@@ -42,20 +38,21 @@
 <input type = "submit" value="sign in">
 </fieldset>
 </form>
-
-
 </div>
 
-<!-- play class='notShow' -->
+        <!--      play          **  class='notShow' **             -->
 <div id='sec-page' class='notShow' >
+<nav>
+<button id= 'new-game'>new game</button>
+<button id= 'report'>report</button>
+<button id= 'change-pwd'>change password</button>
+<button id= 'sign-out'>log out</button>
+</nav>
 
-  <body>
-       <h1> Tic-tac-toe </h1>
     <div id='message2'> </div>
-       <div class="container">
-
-         <div class="row" id='play-div'>
-
+<div id='play-div' class='notShow' >
+       <div  class="container">
+         <div class="row" >
            <div id ='0' name ='nae1' class="col-4 col-md-4 box alt-color" > </div>
            <div id ='1' class="col-4 col-md-4 box alt-color" > </div>
            <div id ='2' class="col-4 col-md-4 box alt-color" > </div>
@@ -65,19 +62,34 @@
            <div id ='6' class="col-4 col-md-4 box alt-color" ></div>
            <div id ='7' class="col-4 col-md-4 box alt-color" > </div>
            <div id ='8' class="col-4 col-md-4 box alt-color" > </div>
-
          </div>
-<div id='reset-page' class='notShow' >
-  <button id= 'new-game'>new game</button>
+         </div>
+            </div>
+</div>
+            <!--   pasword             **  class='notShow' **             -->
+<div id='div-password' class='notShow' >
+
+  <form id="change-password" class="border">
+<fieldset>
+<legend> change password </legend>
+<input type="password" name="passwords[old]" placeholder="old password">
+<input type="password" name="passwords[new]" placeholder="new password">
+<input type = "submit" value="change">
+</fieldset>
+</form>
+<button id='cancel-pwd'> back <button>
  </div>
-     </div>
 
-   </body>
+<!--   report             **  class='notShow' **             -->
 
+<div id="div-report" class='notShow' >
+  <h2> status </h2>
+<div id="total-game"> w/l</div>
+<div id="winRatio"> w/l</div>
+<button id='back'> back <button>
 
 
 </div>
-
   <!-- done -->
     </body>
 </html>

@@ -13,7 +13,7 @@ const signUp = function (data) {
 }
 
 const signIn = function (data) {
-  console.log('In api.js')
+  console.log('In api.js sign in')
 
   return $.ajax({
     url: config.apiUrl + '/sign-in',
@@ -23,7 +23,35 @@ const signIn = function (data) {
   })
 }
 
+const changePassword= function (data) {
+  console.log('In api.js change Password')
+
+  return $.ajax({
+    url: config.apiUrl + '/change-password',
+    method: 'PATCH',
+    headers:{
+      Authorization:'Token token='+store.user.token
+    },
+    data
+    // data: data
+  })
+}
+
+const signOut = function () {
+  console.log('In api.js')
+  return $.ajax({
+    url: config.apiUrl + '/sign-out',
+    method: 'DELETE',
+    headers:{
+      Authorization:'Token token='+store.user.token
+    },
+    // data: data
+  })
+}
+
 module.exports = {
 signUp,
   signIn,
+  changePassword,
+  signOut,
 }
