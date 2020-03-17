@@ -72,7 +72,7 @@ if(!play){
 
 const restart = function(){
   ui.showgame()
-  console.log('in restart')
+  
 const data=''
 api.createGame({})
 .then(ui.restart)

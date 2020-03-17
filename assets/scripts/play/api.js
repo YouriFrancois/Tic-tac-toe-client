@@ -5,7 +5,7 @@ const store = require('../store')
 
 
 const createGame = function (data) {
-  console.log('create new game ')
+
 
   return $.ajax({
     url: config.apiUrl + '/games',
@@ -19,7 +19,7 @@ const createGame = function (data) {
 }
 
 const update = function (data) {
-  console.log('update game  '+store.game.id)
+
 
   return $.ajax({
     url: config.apiUrl + '/games/'+store.game.id,

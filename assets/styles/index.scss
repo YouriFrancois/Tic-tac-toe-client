@@ -41,7 +41,7 @@ $font-color: $light;
 
 
   .coolback{
-background-color: grey;
+    background-color:#00ffcc ;
 
   }
 
@@ -85,8 +85,17 @@ margin-bottom: 10px;
 #cancel-pwd{
   margin-left: 20%;
 }
-#message2{
+#message2 {
+  //  background-color:#00ffcc ;
+    color:black;
+    text-align: center;
+    margin-top:10px;
+    margin-bottom: 20px;
+}
+#message{
     background-color:#00ffcc ;
     color:black;
     text-align: center;
+    margin-top:10px;
+    margin-bottom: 20px;
 }

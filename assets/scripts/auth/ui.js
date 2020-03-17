@@ -3,7 +3,7 @@ const store = require('../store')
 const signUpSuccess =function(data){
 $('#message').text('signed up succesfully')
 
-console.log("sign up data is"+data)
+
 }
 
 const signUpFailure =function(error){
@@ -18,7 +18,7 @@ $('#message').text('signed in succesfully')
 $('#first-page').removeClass()
 $('#first-page').addClass('notShow')
 $('#sec-page').removeClass()
-console.log("** sign up data is ** "+data.user.token)
+
 store.user=data.user
 }
 
@@ -36,19 +36,20 @@ $('#message').addClass('Otil')
 $('#sec-page').removeClass()
 $('#div-password').removeClass()
 $('#div-password').addClass('notShow')
-console.log("sign in data is"+data)
+
 }
 
  const changePasswordFailure  =function(error){
-$('#message').text('change password fail')
+
+$('#message').html('<h2> ** change password fail **</h2>')
 $('#message').removeClass()
-$('#message').addClass('failure')
+$('#message').addClass('Xtil')
 
 console.log("sign in data is"+error)
 }
 
 const cancelPwd = function(){
-$('#message').text('go back to game ')
+$('#message').text(' game ')
 $('#message').removeClass()
 $('#message').addClass('Otil')
 

@@ -2,7 +2,7 @@ const check = require('./checkArr')
 const store = require('../store')
 
 const xUpdate = function(id){
-console.log('inside  X update '+id)
+
   $("#"+id+"").removeClass()
   $("#"+id+"").addClass('col-4 box Xtil')
   $("#"+id+"").html("<h1>X</h1>")
@@ -22,13 +22,13 @@ const oUpdate = function(id){
 const winner= function(pl){
   $('#message2').html('<h2>Player_'+pl+' win</h2>')
   $('#message2').removeClass()
-  $('#message2').addClass('Otil')
+  $('#message2').addClass("coolback")
 }
 
 const goodMove = function(){
   $('#message2').text('you play ')
   $('#message2').removeClass()
-  $('#message2').addClass('Otil')
+    $('#message2').addClass("Otil")
 }
 const badMove = function(){
   $('#message2').html('<h2>you play there already </h2> ')
@@ -41,10 +41,11 @@ const restart =function(data){
 store.game = data.game
 
   $('#message2').html('<h2>new game </h2>')
+  $('#message2').addClass("coolback")
   for(let i =0;i<9;i++){
     $("#"+i).html('')
     $("#"+i).removeClass()
-    $("#"+i).addClass('col-4 col-md-4 box alt-color')
+    $("#"+i).addClass('col-4 col-md-4 box alt-color ')
   }
   //$('#reset-page').addClass('Xtil')
 }
@@ -55,9 +56,7 @@ const noRestart = function (err){
   console.log("the err= "+err)
 }
 const updateGood = function(data){
-  console.log("id = "+data.game.id)
-  console.log("cells = "+data.game.cells)
-  console.log("over = "+data.game.over)
+
 }
 const updateBad = function(er){
   console.log("something went wrong "+er)
@@ -79,7 +78,8 @@ $('#winRatio').html('<h2> Total game over: '+data.games.length+'  </h2>')
 }
 
 const showReport = function (){
-
+  $('#message').html('<h2> report </h2>')
+  $('#message').addClass("coolback")
   $('#sec-page ').addClass('notShow')
   $(' #first-page ').addClass('notShow')
   $('#div-report').removeClass()
