@@ -9,6 +9,8 @@
 const authEvents = require('./auth/event')
 const playEvents = require('./play/event')
 
+
+
 $(() => {
   $("#sign-up").on('submit',authEvents.onSignUp)
   $("#sign-in").on('submit',authEvents.onSignIn)
@@ -19,6 +21,5 @@ $(() => {
   $("#change-pwd").on('click',authEvents.onchangePwd)
 $("#sign-out").on('click',authEvents.onSignOut)
   $("#report").on('click',playEvents.report)
-
   $("#back").on('click',authEvents.onCancelPwd)
 })

@@ -11,7 +11,7 @@ console.log('inside  X update '+id)
 
 
 const oUpdate = function(id){
-  console.log('inside  O update '+id)
+
 
   $("#"+id+"").removeClass()
   $("#"+id+"").addClass('col-4 box Otil')
@@ -20,7 +20,7 @@ const oUpdate = function(id){
 }
 
 const winner= function(pl){
-  $('#message2').text('Player_'+pl+' win')
+  $('#message2').html('<h2>Player_'+pl+' win</h2>')
   $('#message2').removeClass()
   $('#message2').addClass('Otil')
 }
@@ -37,7 +37,7 @@ const badMove = function(){
 }
 
 const restart =function(data){
-console.log("inside create")
+
 store.game = data.game
 
   $('#message2').html('<h2>new game </h2>')
@@ -86,11 +86,11 @@ const showReport = function (){
 }
 
 const showgame = function(){
-
 $('#play-div').removeClass()
+}
 
-
-
+const isDraw = function(){
+    $('#message2').html('<h2>this is a draw</h2> ')
 }
 
 module.exports = {
@@ -107,5 +107,6 @@ showstatus,
 showstatusFail,
 gameOver,
 showReport,
-showgame
+showgame,
+isDraw
 }

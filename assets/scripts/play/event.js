@@ -20,10 +20,12 @@ if(tic[id]===''&& play){
 ui.xUpdate(id)
   tic[id]="X";
 
-  if(check.isOver(tic) ){
+
+  if(check.isOver(tic)  ){
   ui.winner('X')
   play = false
   }
+
 
 //==================================
 api.update(datax.sendData(id,'x',!play))
@@ -31,8 +33,6 @@ api.update(datax.sendData(id,'x',!play))
 .catch(ui.updateBad)
   //===============================================
     isX =false // switch user
-
-
 
 }else
 {
@@ -51,6 +51,12 @@ api.update(datax.sendData(id,'o',!play))
 }
 if(play)
 ui.goodMove()
+if (check.draw(tic)){
+  if(play)  {ui.isDraw()}
+  play = false
+
+}
+
 
 }else{
   if(play)

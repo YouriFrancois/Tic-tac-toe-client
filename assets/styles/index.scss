@@ -38,3 +38,55 @@ $font-color: $light;
     color: white;
 
   }
+
+
+  .coolback{
+background-color: grey;
+
+  }
+
+          /*       ===== ======= ===== ====== ===== */
+  body{
+    background-color:$alt-color;
+    font-family: 'Playfair Display', serif;
+  }
+
+  button{
+
+  border-radius: 4px;
+  margin-left: 20px;
+    margin-top:10px;
+  }
+
+  button:hover{
+
+  background-color:#00ffcc ;
+  }
+
+nav{
+  height: 50px;
+background-color: blue;
+margin-bottom:10px ;
+
+}
+
+input{
+  display: block;
+  width: 40%;
+  margin-top:3px;
+}
+
+
+form{
+margin-left: 20%;
+margin-bottom: 10px;
+
+}
+#cancel-pwd{
+  margin-left: 20%;
+}
+#message2{
+    background-color:#00ffcc ;
+    color:black;
+    text-align: center;
+}

@@ -3,7 +3,8 @@
     <head>
       <title>Tic-tac-toe</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap"
+rel="stylesheet">
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
@@ -17,25 +18,26 @@
       <!--           sign in   -->
 <h1> Tic-tac-toe </h1>
 <div id='message'><h2></h2></div>
+
 <div id="first-page">
     <h2>  welcome please sign up or sign in </h2>
 
-  <form id="sign-up" class="border">
+  <form id="sign-up">
 <fieldset>
 <legend> sign up </legend>
 <input type="text" name="credentials[email]" placeholder="email">
 <input type="password" name="credentials[password]" placeholder="password">
 <input type="password" name="credentials[password_confirmation]" placeholder="confirm password">
-<input type = "submit" value="sign up">
+<button type = "submit" value="sign up" >sign up</button>
 </fieldset>
 </form>
              <!--        sec form -->
-<form id="sign-in" class="border">
+<form id="sign-in" >
 <fieldset>
 <legend> sign in </legend>
 <input type="text" name="credentials[email]" placeholder="email">
 <input type="password" name="credentials[password]" placeholder="password">
-<input type = "submit" value="sign in">
+<button type = "submit" value="sign up" >sign in</button>
 </fieldset>
 </form>
 </div>
@@ -53,7 +55,7 @@
 <div id='play-div' class='notShow' >
        <div  class="container">
          <div class="row" >
-           <div id ='0' name ='nae1' class="col-4 col-md-4 box alt-color" > </div>
+           <div id ='0' class="col-4 col-md-4 box alt-color" > </div>
            <div id ='1' class="col-4 col-md-4 box alt-color" > </div>
            <div id ='2' class="col-4 col-md-4 box alt-color" > </div>
            <div id ='3' class="col-4 col-md-4 box alt-color" > </div>
@@ -69,7 +71,7 @@
             <!--   pasword             **  class='notShow' **             -->
 <div id='div-password' class='notShow' >
 
-  <form id="change-password" class="border">
+  <form id="change-password" >
 <fieldset>
 <legend> change password </legend>
 <input type="password" name="passwords[old]" placeholder="old password">
