@@ -2,7 +2,7 @@ const check = require('./checkArr')
 const store = require('../store')
 
 const xUpdate = function(id){
-
+  $('#message').html('<h2> O turn </h2>')
   $("#"+id+"").removeClass()
   $("#"+id+"").addClass('col-4 box Xtil')
   $("#"+id+"").html("<h1>X</h1>")
@@ -11,7 +11,7 @@ const xUpdate = function(id){
 
 
 const oUpdate = function(id){
-
+  $('#message').html('<h2> X turn </h2>')
 
   $("#"+id+"").removeClass()
   $("#"+id+"").addClass('col-4 box Otil')
@@ -20,6 +20,7 @@ const oUpdate = function(id){
 }
 
 const winner= function(pl){
+    $('#message').html('<h2> winner  **  winner *** winner  </h2>')
   $('#message2').html('<h2>Player_'+pl+' win</h2>')
   $('#message2').removeClass()
   $('#message2').addClass("coolback")
@@ -48,6 +49,7 @@ store.game = data.game
     $("#"+i).addClass('col-4 col-md-4 box alt-color ')
   }
   //$('#reset-page').addClass('Xtil')
+  $('#div-password').addClass('notShow')
 }
 const noRestart = function (err){
   $('#message2').html('<h2>can not create new game </h2>')
@@ -80,17 +82,22 @@ $('#winRatio').html('<h2> Total game over: '+data.games.length+'  </h2>')
 const showReport = function (){
   $('#message').html('<h2> report </h2>')
   $('#message').addClass("coolback")
-  $('#sec-page ').addClass('notShow')
+  $('#message2').addClass('notShow')
+$('#play-div').addClass('notShow')
   $(' #first-page ').addClass('notShow')
   $('#div-report').removeClass()
+    $('#div-password').addClass('notShow')
 }
 
 const showgame = function(){
 $('#play-div').removeClass()
+
+  $('#div-report').addClass('notShow')
 }
 
 const isDraw = function(){
     $('#message2').html('<h2>this is a draw</h2> ')
+      $('#message').html('<h2>  </h2>')
 }
 
 module.exports = {

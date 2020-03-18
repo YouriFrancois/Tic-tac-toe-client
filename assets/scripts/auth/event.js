@@ -42,9 +42,7 @@ const onChangePassword = function (event) {
 .catch(ui.changePasswordFailure)
 }
 
-const onCancelPwd = function(){
-  ui.cancelPwd()
-}
+
 
 const onchangePwd = function(){
   ui.divPwd()
@@ -64,7 +62,7 @@ module.exports = {
   onSignUp,
   onSignIn,
 onChangePassword,
-onCancelPwd,
+
 onchangePwd,
 onSignOut
 }

@@ -2,7 +2,8 @@ const store = require('../store')
 
 const signUpSuccess =function(data){
 $('#message').text('signed up succesfully')
-
+$('#sign-in').closest('form').find('input[type=text], textarea').val('')
+  $('#sign-in').closest('form').find('input[type=password], textarea').val('')
 
 }
 
@@ -20,6 +21,9 @@ $('#first-page').addClass('notShow')
 $('#sec-page').removeClass()
 
 store.user=data.user
+
+$('#sign-in').closest('form').find('input[type=text], textarea').val('')
+  $('#sign-in').closest('form').find('input[type=password], textarea').val('')
 }
 
 const signInFailure =function(error){
@@ -37,6 +41,9 @@ $('#sec-page').removeClass()
 $('#div-password').removeClass()
 $('#div-password').addClass('notShow')
 
+
+$('#change-password').closest('form').find('input[type=password], textarea').val('')
+
 }
 
  const changePasswordFailure  =function(error){
@@ -48,21 +55,14 @@ $('#message').addClass('Xtil')
 console.log("sign in data is"+error)
 }
 
-const cancelPwd = function(){
-$('#message').text(' game ')
-$('#message').removeClass()
-$('#message').addClass('Otil')
 
-$('#sec-page').removeClass()
-$('#div-password').removeClass()
-$('#div-password').addClass('notShow')
-$('#div-report').addClass('notShow')
-}
 const divPwd = function (){
+  $('#message').html('<h3> ** change password  **</h3>')
   $('#div-password').removeClass()
   $('#sec-page').removeClass()
-  $('#sec-page').addClass('notShow')
+$('#play-div').addClass('notShow')
   $('#first-page').addClass('notShow')
+  $('#div-report').addClass('notShow')
 
 }
 
@@ -70,7 +70,8 @@ const signOutSuccess = function (){
   $('#message').text('sign out succesfully')
   $('#message').removeClass()
   $('#message').addClass('success')
-
+$('#div-report').addClass('notShow')
+$('#div-password').addClass('notShow')
   $('#sec-page').addClass('notShow')
   $('#first-page').removeClass()
 }
@@ -88,7 +89,7 @@ signInSuccess,
 signInFailure,
 changePasswordSuccess,
 changePasswordFailure,
-cancelPwd,
+
 divPwd,
 signOutSuccess,
 signOutFailure,

@@ -17,9 +17,11 @@ $(() => {
   $("#play-div").on('click',playEvents.clickOn)
   $("#new-game").on('click',playEvents.restart)
   $("#change-password").on('submit',authEvents.onChangePassword)
-  $("#cancel-pwd").on('click',authEvents.onCancelPwd)
+
   $("#change-pwd").on('click',authEvents.onchangePwd)
 $("#sign-out").on('click',authEvents.onSignOut)
   $("#report").on('click',playEvents.report)
-  $("#back").on('click',authEvents.onCancelPwd)
+  
+
+    $("#game-cpu").on('click',playEvents.vsCpu)
 })
