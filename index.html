@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Tic-tac-toe</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap"
+rel="stylesheet">
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+
+    <body>
+
+      <!--           sign in   -->
+<h1> Tic-tac-toe </h1>
+<div id='message'><h2></h2></div>
+
+<div id="first-page">
+    <h2>  welcome please sign up or sign in </h2>
+
+  <form id="sign-up">
+<fieldset>
+<legend> sign up </legend>
+<input type="text" name="credentials[email]" placeholder="email">
+<input type="password" name="credentials[password]" placeholder="password">
+<input type="password" name="credentials[password_confirmation]" placeholder="confirm password">
+<button type = "submit" value="sign up" >sign up</button>
+</fieldset>
+</form>
+             <!--        sec form -->
+<form id="sign-in" >
+<fieldset>
+<legend> sign in </legend>
+<input type="text" name="credentials[email]" placeholder="email">
+<input type="password" name="credentials[password]" placeholder="password">
+<button type = "submit" value="sign up" >sign in</button>
+</fieldset>
+</form>
+</div>
+
+        <!--      play          **  class='notShow' **             -->
+<div id='sec-page' class='notShow' >
+<nav>
+<button id= 'new-game'>new game</button>
+<button id= 'game-cpu'>game vs cpu</button>
+<button id= 'report'>report</button>
+<button id= 'change-pwd'>change password</button>
+<button id= 'sign-out'>log out</button>
+</nav>
+
+    <div id='message2'> </div>
+<div id='play-div' class='notShow' >
+       <div  class="container">
+         <div class="row" >
+           <div id ='0' class="col-4 col-md-4 box alt-color" > </div>
+           <div id ='1' class="col-4 col-md-4 box alt-color" > </div>
+           <div id ='2' class="col-4 col-md-4 box alt-color" > </div>
+           <div id ='3' class="col-4 col-md-4 box alt-color" > </div>
+           <div id ='4' class="col-4 col-md-4 box alt-color" > </div>
+           <div id ='5' class="col-4 col-md-4 box alt-color" > </div>
+           <div id ='6' class="col-4 col-md-4 box alt-color" ></div>
+           <div id ='7' class="col-4 col-md-4 box alt-color" > </div>
+           <div id ='8' class="col-4 col-md-4 box alt-color" > </div>
+         </div>
+         </div>
+            </div>
+</div>
+            <!--   pasword             **  class='notShow' **             -->
+<div id='div-password' class='notShow' >
+
+  <form id="change-password" >
+<fieldset>
+<legend> change password </legend>
+<input type="password" name="passwords[old]" placeholder="old password">
+<input type="password" name="passwords[new]" placeholder="new password">
+<input type = "submit" value="change">
+</fieldset>
+</form>
+
+ </div>
+
+<!--   report             **  class='notShow' **             -->
+
+<div id="div-report" class='notShow' >
+  <h2> status </h2>
+<div id="total-game"> w/l</div>
+<div id="winRatio"> w/l</div>
+
+
+
+</div>
+  <!-- done -->
+    </body>
+</html>
