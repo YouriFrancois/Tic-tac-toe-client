@@ -100,6 +100,14 @@ const isDraw = function(){
       $('#message').html('<h2>  </h2>')
 }
 
+
+const over = function(){
+      $('#message2').removeClass()
+    $('#message2').html('<h2> game is over</h2> ')
+    $('#message').html('')
+        $('#message2').addClass('xtil')
+}
+
 module.exports = {
 oUpdate,
 xUpdate,
@@ -115,5 +123,6 @@ showstatusFail,
 gameOver,
 showReport,
 showgame,
-isDraw
+isDraw,
+over
 }

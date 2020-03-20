@@ -53,7 +53,7 @@ api.update(datax.sendData(id,'o',!play))
 if (cpu === true){
 let aiId = ai.aiMove(tic)
 
-setTimeout(()=>ui.oUpdate(aiId),1300)
+ui.oUpdate(aiId)
   tic[aiId]="O";
   console.log("tic = "+tic)
 if(check.isOver(tic) ){
@@ -63,7 +63,7 @@ play = false
 api.update(datax.sendData(aiId,'o',!play))
 .then(ui.updateGood)
 .catch(ui.updateBad)
-  isX = true
+if(play)  isX = true
 }
   //=======================
 
@@ -77,8 +77,9 @@ if (check.draw(tic)){
 
 
 }else{
-  if(play)
-ui.badMove()
+  if(play===false) ui.over()
+
+  if(play) ui.badMove()
 }
 
 }

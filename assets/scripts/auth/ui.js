@@ -2,8 +2,8 @@ const store = require('../store')
 
 const signUpSuccess =function(data){
 $('#message').text('signed up succesfully')
-$('#sign-in').closest('form').find('input[type=text], textarea').val('')
-  $('#sign-in').closest('form').find('input[type=password], textarea').val('')
+$('#sign-up').closest('form').find('input[type=text], textarea').val('')
+  $('#sign-up').closest('form').find('input[type=password], textarea').val('')
 
 }
 
@@ -11,6 +11,9 @@ const signUpFailure =function(error){
 $('#message').text('signed up fail')
 $('#message').removeClass()
 $('#message').addClass('failure')
+
+$('#sign-up').closest('form').find('input[type=text], textarea').val('')
+$('#sign-up').closest('form').find('input[type=password], textarea').val('')
 console.log("sign up data is"+error)
 }
 
@@ -31,6 +34,10 @@ $('#message').text('signed in fail')
 $('#message').removeClass()
 $('#message').addClass('failure')
 console.log("sign in data is"+error)
+
+
+$('#sign-in').closest('form').find('input[type=text], textarea').val('')
+  $('#sign-in').closest('form').find('input[type=password], textarea').val('')
 }
 
 const changePasswordSuccess = function(data){
@@ -51,7 +58,7 @@ $('#change-password').closest('form').find('input[type=password], textarea').val
 $('#message').html('<h2> ** change password fail **</h2>')
 $('#message').removeClass()
 $('#message').addClass('Xtil')
-
+$('#change-password').closest('form').find('input[type=password], textarea').val('')
 console.log("sign in data is"+error)
 }
 

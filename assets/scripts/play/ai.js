@@ -19,8 +19,6 @@ console.log(" ar1 "+ar1)
 }
 
 
-
-
 module.exports = {
 aiMove
 
