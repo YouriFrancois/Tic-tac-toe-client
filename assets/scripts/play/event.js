@@ -14,7 +14,7 @@ const tic=['','','','','','','','','']
 
 const clickOn = function (event) {
 let id=event.target.id
-//  console.log(" this is "+id)
+
 if(tic[id]===''&& play){
 
   if(isX){
@@ -23,6 +23,9 @@ ui.xUpdate(id)
   if(check.isOver(tic)  ){
   ui.winner('X')
   play = false
+  api.update(datax.sendData(id,'x',!play))
+  .then(ui.updateGood)
+  .catch(ui.updateBad)
   return ''
   }//==================================
 api.update(datax.sendData(id,'x',!play))
@@ -55,7 +58,7 @@ let aiId = ai.aiMove(tic)
 
 ui.oUpdate(aiId)
   tic[aiId]="O";
-  console.log("tic = "+tic)
+
 if(check.isOver(tic) ){
 ui.winner('0') // the the user they won
 play = false

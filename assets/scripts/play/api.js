@@ -48,7 +48,7 @@ const statusOver = function (data){
 }
 
 const status = function (){
-  //console.log('update game  '+store.game.id)
+
 
   return $.ajax({
     url: config.apiUrl +'/games' ,

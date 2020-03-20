@@ -10,7 +10,6 @@ const onSignUp = function (event) {
 
 
   const data = getFormFields(event.target)
-    console.log('after the data is = '+ data)
 
   api.signUp(data)
 
@@ -35,7 +34,7 @@ const onSignIn = function (event) {
 const onChangePassword = function (event) {
   event.preventDefault()
 
-  //console.log("change Passwor data is "+data.user.token)
+
   const data = getFormFields(event.target)
   api.changePassword(data)
 .then(ui.changePasswordSuccess)
